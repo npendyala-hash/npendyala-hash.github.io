@@ -11,6 +11,22 @@ main {
   padding: 20px;
 }
 
+/* Global links - ensure high contrast on dark background */
+a {
+  color: #ffffff; /* 21:1 contrast on #111 */
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #e0e0e0; /* maintains strong contrast */
+}
+
+a:hover,
+a:focus {
+  color: #ffd166; /* still high contrast on dark bg */
+  text-decoration: underline;
+}
+
 /* Navigation */
 nav ul {
   list-style: none;
@@ -21,14 +37,8 @@ nav ul {
   background: #1c1c1c;
 }
 
-nav a {
-  color: #cde1ff;
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
+nav a { text-decoration: none; }
+nav a:hover { text-decoration: underline; }
 
 /* Text highlight utility */
 .highlight {
